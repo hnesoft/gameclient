@@ -14,10 +14,9 @@ export class GameService {
   }
 
   check(symbolId: number): Observable<Response> {
-    //private apiServerUrl = environment.apiBaseUrl;
-    const url = 'http://localhost:8080/';
+    const url = environment.apiBaseUrl + "/";
     const headers = new HttpHeaders().set('Accept', 'application/json');
-    const params = new HttpParams().set('choice', symbolId);
+    const params = new HttpParams().set('symbolId', symbolId);
     return this.http.get<Response>(url, { headers, params });
   }
 }

@@ -1,5 +1,5 @@
 export interface Response {
     userSymbolId: number;
-    computerSymbaoId: number;
+    computerSymbolId: number;
     resultMessage: string;
 }
